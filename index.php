@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+    <div id="container">
     <!--  Cabecera  -->
     <header id="header">
         <div id="logo">
@@ -91,9 +92,6 @@
             <a href="">Comprar</a>
         </div>
     
-    
-    
-    
     </div>
 
     <!-- Pie de Pagina -->
@@ -101,6 +99,6 @@
         <p>Desarrollado por Nicolás Ousset &copy; <?=date('Y')?> </p>
 
     </footer>
-
+    </div>
 </body>
 </html>
