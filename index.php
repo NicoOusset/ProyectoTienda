@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <div id="container">
+
+<div id="container">
+
     <!--  Cabecera  -->
     <header id="header">
         <div id="logo">
@@ -18,7 +20,7 @@
     </header>
     
     <!-- Menu -->
-    <nav>
+    <nav id="menu">
         <ul>
             <li>
                 <a href="#">Inicio</a>
@@ -36,16 +38,19 @@
                 <a href="#">Categoria 4</a>
             </li>
             <li>
-                <a href="#">Categoria 5</a>
+                <a href="#">Contacto</a>
             </li>
         </ul>   
     </nav>
 
-    <!-- Barra Lateral -->
+    
     <div id="content">
+
+        <!-- Barra Lateral -->
         <aside id="lateral">
 
             <div id="login" class="block_aside">
+                <h3>Entrar a la Web</h3>
                 <form action="#" method="post">
                     <label for="email">Email:</label>
                     <input type="email" name="email">
@@ -55,50 +60,56 @@
                     <input type="submit" value="Enviar">
                 </form>
 
-                <a href="#">Mis pedidos</a>
-                <a href="#">Gestionar pedidos</a>
-                <a href="#">Gestionar categorias</a>
+                <ul>
+                    <li> <a href="#">Mis pedidos</a></li>
+                    <li> <a href="#">Gestionar pedidos</a></li>
+                    <li> <a href="#">Gestionar categorias</a></li>
+                </ul>          
+               
             </div>
         </aside>
-    </div>
-
-    <!-- Contenido Central -->
-    <div id="central">
-        <div class="product">
-            <img src="assets/img/camiseta.png" alt="camiseta">
-            <h2>Camiseta Azul Ancha</h2>
-            <p>300 Pesos</p>
-            <a href="">Comprar</a>
-        </div>
-
-        <div class="product">
-            <img src="assets/img/camiseta.png" alt="camiseta">
-            <h2>Camiseta Azul Ancha</h2>
-            <p>300 Pesos</p>
-            <a href="">Comprar</a>
-        </div>
-
-        <div class="product">
-            <img src="assets/img/camiseta.png" alt="camiseta">
-            <h2>Camiseta Azul Ancha</h2>
-            <p>300 Pesos</p>
-            <a href="">Comprar</a>
-        </div>
-
-        <div class="product">
-            <img src="assets/img/camiseta.png" alt="camiseta">
-            <h2>Camiseta Azul Ancha</h2>
-            <p>300 Pesos</p>
-            <a href="">Comprar</a>
-        </div>
     
+
+        <!-- Contenido Central -->
+        <div id="central">
+
+            <h1>Productos destacados</h1>
+
+            <div class="product">
+                <img src="assets/img/camiseta.png" alt="camiseta">
+                <h2>Camiseta Azul Ancha</h2>
+                <p>300 Pesos</p>
+                <a href="">Comprar</a>
+            </div>
+
+            <div class="product">
+                <img src="assets/img/camiseta.png" alt="camiseta">
+                <h2>Camiseta Azul Ancha</h2>
+                <p>300 Pesos</p>
+                <a href="">Comprar</a>
+            </div>
+
+            <div class="product">
+                <img src="assets/img/camiseta.png" alt="camiseta">
+                <h2>Camiseta Azul Ancha</h2>
+                <p>300 Pesos</p>
+                <a href="">Comprar</a>
+            </div>
+
+            <div class="product">
+                <img src="assets/img/camiseta.png" alt="camiseta">
+                <h2>Camiseta Azul Ancha</h2>
+                <p>300 Pesos</p>
+                <a href="">Comprar</a>
+            </div>
+        </div>
     </div>
 
     <!-- Pie de Pagina -->
     <footer id="footer">
         <p>Desarrollado por Nicolás Ousset &copy; <?=date('Y')?> </p>
-
     </footer>
+
     </div>
 </body>
 </html>
