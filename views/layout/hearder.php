@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tienda de Camisetas</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<div id="container">
+
+    <!--  Cabecera  -->
+    <header id="header">
+        <div id="logo">
+            <img src="assets/img/camiseta.png" alt="camisetaLogo">
+            <a href="index.php">Tienda de camisetas</a>
+        </div>    
+    </header>
+    
+    <!-- Menu -->
+    <nav id="menu">
+        <ul>
+            <li>
+                <a href="#">Inicio</a>
+            </li>
+            <li>
+                <a href="#">Categoria 1</a>
+            </li>
+            <li>
+                <a href="#">Categoria 2</a>
+            </li>
+            <li>
+                <a href="#">Categoria 3</a>
+            </li>
+            <li class="costado">
+                <a href="#">Registro</a>
+            </li>
+            <li class="costado">
+                <a href="#">Contacto</a>
+            </li>
+        </ul>   
+    </nav>
+
+    
+    <div id="content">

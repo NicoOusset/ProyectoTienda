@@ -10,11 +10,11 @@ body{
 }
 
 a{
-    color: #01b1ea;
+    color: #d61103;
 }
 
 a:visited{
-    color: #01b1ea;
+    color: #d61103;
 }
 
 a:hover{
@@ -55,7 +55,7 @@ a:hover{
     letter-spacing: 4px;
     font-family: 'Open Sans', Helvetica, sans-serif;
     text-transform: uppercase;
-    color: #01b1ea;
+    color: #e00c0c;
     font-weight: bold;
     text-decoration: none;
     margin-top: 18px;
@@ -65,7 +65,7 @@ a:hover{
 }
 
 #logo a:hover{
-    text-shadow: 0px 2px 1px #222, 0px 0px 4px #01b1ea;
+    text-shadow: 0px 2px 1px #222, 0px 0px 4px #e00c0c;
 }
 
 /*   ------- MENU --------  */
@@ -75,7 +75,7 @@ a:hover{
     color: white;
     height: 55px;
     clear: both;
-    border-bottom: 4px solid #057499;
+    border-bottom: 4px solid #640404;
 
 }
 
@@ -106,12 +106,12 @@ a:hover{
     border-left: 1px solid #363636; 
 }
 
-#menu ul li:last-child{
+#menu ul .costado{
     float: right;
 }
 
 #menu a:hover{
-    background: #01b1ea;
+    background: #fc0404;
 }
 
 
@@ -152,7 +152,7 @@ a:hover{
     font-size: 16px;
     font-weight: bold;
     background: #e1e1e1;
-    border-bottom: 2px solid #01b1ea;
+    border-bottom: 2px solid #e70d0d;
 }
 
 #lateral ul{
@@ -183,13 +183,13 @@ select{
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus{
-    border: 1px solid #1579b5;
+    border: 1px solid #f71a1a;
     color: black;
 }
 
 input[type="button"],
 input[type="submit"],
-button{
+button, .button{
     display: block;
     border-radius: 2px;
     width: auto;
@@ -197,8 +197,8 @@ button{
     padding-left: 10px;
     padding-right: 10px;
     color: white;
-    background: #2979cd;
-    border: 1px solid #11608e;
+    background: #df1414;
+    border: 1px solid #770a0a;
     cursor: pointer;
 }
 
@@ -223,15 +223,74 @@ button{
 
 /*    CENTRAL     */
 #central{
-    width: 75%;
-    float: rigth;
+    width: 72%;
+    float: right;
     border-left: 1px solid #ccc;
+    box-shadow: -5px -1px 5px #ddd;
+    padding: 25px;
+    min-height: 500px;
+}
+
+#central h1{
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-top: 0px; 
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+
+}
+
+/*  PRODUCTOS    */
+.product{
+    width: 30%;
+    border-right: 1px solid #ccc;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.product h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product .button{
+    background: #881010;
+    border: 1px solid #460909;
+    color: white !important;
+    text-decoration: none;
     
 }
 
 .product img{
     width: 100px;
+    margin-bottom: 10px;
+}
+
+.product p{
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 
+
+
+/*FOOTER*/
+
+#footer{
+    clear: both;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background: #222;
+    border-top: 4px solid #640404;
+}
 
