@@ -21,6 +21,28 @@ a:hover{
     color: #555;
 }
 
+.alert_green{
+    color: green;
+}
+
+.alert_red{
+    margin-top: 20px;
+    color: red;
+}
+
+table{
+    border: 1px solid #555;
+    width: 100%;
+    text-align: center;
+
+}
+
+td{
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    padding: 2px;
+}
+
 /* CONTAINER */
 #container{
     width: 80%;
@@ -157,7 +179,7 @@ a:hover{
 
 #lateral ul{
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 #lateral ul li{
@@ -165,6 +187,10 @@ a:hover{
     margin-left: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+#lateral ul li a{
+    text-decoration: none;
 }
 
 /*FORMS*/
@@ -202,6 +228,14 @@ button, .button{
     cursor: pointer;
 }
 
+.button-small{
+    width: 120px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: white !important;
+}
+
 label,
 input[type="text"],
 input[type="password"],
@@ -219,6 +253,15 @@ input[type="submit"],
 button{
     display: block;
     margin-top: 10px;
+}
+
+#cerrar{
+    margin-top: 18px;
+    background: #df1414;
+    border: 1px solid #770a0a;
+    color: white !important;
+    text-decoration: none;
+    padding: 7px;
 }
 
 /*    CENTRAL     */
@@ -265,8 +308,9 @@ button{
     border: 1px solid #460909;
     color: white !important;
     text-decoration: none;
-    
 }
+
+
 
 .product img{
     width: 100px;

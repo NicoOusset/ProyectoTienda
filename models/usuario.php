@@ -82,6 +82,24 @@
             return $result;
         }
 
+        public function login($email, $password){
+            //comprobar si existe el usuario
+            $result = false;    
+            $sql = "SELECT * FROM usuarios WHERE email = '$email'";
+            $login = $this->db->query($sql);
+
+            if($login && $login->num_rows==1){
+                $usuario = $login->fetch_object();
+
+                $pass = $usuario->password;
+
+                if($password == $pass){
+                    $result =$usuario;
+                }
+            }
+            return $result;
+        }
+
     }
 
 ?>
