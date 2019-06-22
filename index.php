@@ -1,14 +1,24 @@
-
 <?php
+    session_start();
+
     require_once 'autoload.php';
+    require_once 'config/db.php';
+    require_once 'helpers/utils.php';
+    require_once 'config/parametros.php';
     require_once 'views/layout/hearder.php';
     require_once 'views/layout/sidebar.php';
     
+    function show_error(){
+        $error = new errorController();
+        $error->index();
+    }
 
     if(isset($_GET['controller'])){
         $nombre_controlador = $_GET['controller'].'Controller';
+    }elseif(!isset($_GET['controller']) && !isset($_GET['action'])){
+        $nombre_controlador = controller_default;
     }else{
-        echo "la pag no existe 1 ";
+        show_error();
         exit();
     }
 
@@ -18,11 +28,14 @@
         if(isset($_GET['action']) && method_exists( $controlador, $_GET['action'] )){
             $accion=$_GET['action'];
             $controlador->$accion();
+        }elseif(!isset($_GET['controller']) && !isset($_GET['action'])){
+            $accion=action_default;
+            $controlador->$accion();
         }else {
-            echo "la pag no existe 2 ";
-            }
+            show_error();
+        }
     }else {
-        echo "la pag no existe 3 ";
+        show_error();
     }
 
     require_once 'views/layout/footer.php';
