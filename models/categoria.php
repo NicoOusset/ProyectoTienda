@@ -10,6 +10,7 @@
             $this->db = Database::connect();
         }
 
+        //generar get y set en http://mikeangstadt.name/projects/getter-setter-gen/
         public function getId(){
             return $this->id;
         }

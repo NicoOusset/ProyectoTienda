@@ -148,7 +148,7 @@ td{
 
 /*BARRA LATERAL*/
 #lateral{
-    width: 22%;
+    width: 20%;
     min-height: 500px;
     float: left;
     margin-top: 20px;
@@ -194,9 +194,16 @@ td{
 }
 
 /*FORMS*/
+form{
+    width: 50%;
+}
+
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="number"],
+textarea,
 select{
     border: 1px solid #c9c9c9;
     box-shadow: 0px0px 2px #ccc inset;
@@ -208,7 +215,10 @@ select{
 
 input[type="text"]:focus,
 input[type="password"]:focus,
-input[type="email"]:focus{
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus{
     border: 1px solid #f71a1a;
     color: black;
 }
@@ -240,6 +250,8 @@ label,
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="number"],
+textarea,
 select{
     display: block;
     width: 95%;
@@ -255,6 +267,22 @@ button{
     margin-top: 10px;
 }
 
+.button-form{
+    display: block;
+    float: left;
+    width: 40%;
+    margin: 2px;
+    border-radius: 2px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white !important;
+    background: #df1414;
+    border: 1px solid #770a0a;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 #cerrar{
     margin-top: 18px;
     background: #df1414;
@@ -266,7 +294,7 @@ button{
 
 /*    CENTRAL     */
 #central{
-    width: 72%;
+    width: 70%;
     float: right;
     border-left: 1px solid #ccc;
     box-shadow: -5px -1px 5px #ddd;
