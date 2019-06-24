@@ -5,10 +5,10 @@
 </a>
 
 <?php  if(isset($_SESSION['producto']) && $_SESSION['producto']=='complete' ):    ?>
-    <strong class="alert_green"> El producto fue creado con exito </strong>
+    <strong class="alert_green"> El producto fue guardado con exito </strong>
 
 <?php elseif(isset($_SESSION['producto']) && $_SESSION['producto']=='failed' ):  ?>
-    <strong class="alert_red"> El producto no se ha creado correctamente </strong>
+    <strong class="alert_red"> El producto no se ha guardado correctamente </strong>
 <?php endif;  ?>
 <?php Utils::deleteSession('producto');?>
 

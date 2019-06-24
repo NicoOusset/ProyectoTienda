@@ -1,12 +1,12 @@
  <!-- Barra Lateral -->
- <aside id="lateral">
+<aside id="lateral">
 
 <div id="login" class="block_aside">
 
     <?php if(!isset($_SESSION['identity'])): ?>
 
     <h3>Entrar a la Web</h3>
-    <form action="<?=base_url?>usuario/login" method="post">
+    <form action="<?=base_url?>usuario/login" method="post" class="form-menu">
 
         <label for="email">Email:</label>
         <input type="email" name="email">

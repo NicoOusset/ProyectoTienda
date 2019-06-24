@@ -148,12 +148,11 @@ td{
 
 /*BARRA LATERAL*/
 #lateral{
-    width: 20%;
+    width: 15%;
     min-height: 500px;
     float: left;
     margin-top: 20px;
     margin-left: 10px;
-    
 }
 
 #lateral .block_aside{
@@ -197,7 +196,9 @@ td{
 form{
     width: 50%;
 }
-
+.form-menu{
+    width: 100%;
+}
 
 input[type="text"],
 input[type="password"],
@@ -294,7 +295,7 @@ button{
 
 /*    CENTRAL     */
 #central{
-    width: 70%;
+    width: 75%;
     float: right;
     border-left: 1px solid #ccc;
     box-shadow: -5px -1px 5px #ddd;
@@ -351,6 +352,9 @@ button{
     margin-bottom: 10px;
 }
 
+.thumb{
+    width: 100px;
+}
 
 
 

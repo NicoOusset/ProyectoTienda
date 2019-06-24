@@ -105,6 +105,23 @@
             return $result;
         }
 
+        public function edit(){
+            $sql = "UPDATE INTO productos SET nombre = '{$this->getNombre()}', descripcion = '{$this->getDescripcion()}', precio = {$this->getPrecio()}, stock = {$this->getStock()}, categoria_id= {$this->getCategoria_id()} ";
+            
+            if($this->getImagen() != null){
+                $sql .= ", imagen = '{$this->getImagen()}'";
+            }
+            $sql .= " WHERE id = {$this->id}";
+        
+            $save = $this->db->query($sql);
+
+            $result = false;
+            if ($save) {
+                $result = true;
+            }
+            return $result;
+        }
+
         public function delete(){
             $sql = "DELETE FROM productos WHERE id = {$this->id} ";
             $delete = $this->db->query($sql);
@@ -115,6 +132,11 @@
             }
             return $result;
 
+        }
+
+        public function getOne(){
+            $producto = $this->db->query("SELECT * FROM productos WHERE id= {$this->getId()}");
+            return $producto->fetch_object();
         }
 
 
