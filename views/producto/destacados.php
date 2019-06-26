@@ -1,72 +1,25 @@
   <!-- Contenido Central -->
      
-    <h1>Productos destacados</h1>
+    <h1>Algunos de nuestros productos</h1>
 
-    <div class="product">
-        <img src="assets/img/camiseta.png" alt="camiseta">
-        <h2>Camiseta Roja Ancha</h2>
-        <p>300 Pesos</p>
-        <a href="" class="button">Comprar</a>
-    </div>
+    <?php while ($pro = $productos->fetch_object()):  ?>
 
-    <div class="product">
-        <img src="assets/img/camiseta.png" alt="camiseta">
-        <h2>Camiseta Roja Ancha</h2>
-        <p>300 Pesos</p>
-        <a href="" class="button">Comprar</a>
-    </div>
+        <div class="product">
+            <a href="<?=base_url?>producto/ver&id=<?=$pro->id?>">
+                <?php
+                    if($pro->imagen == null):
+                    $src = "assets/img/camiseta.png"; 
+                    else:
+                        $src = base_url."uploads/images/".$pro->imagen;   
+                    endif;
+                ?>
+                <img src="<?=$src?>" alt="camiseta" >
+                <h2><?=$pro->nombre?></h2>
+            </a>
+            <p>$<?=$pro->precio?></p>
+            <a href="" class="button">Comprar</a>
+        </div>
 
-    <div class="product">
-        <img src="assets/img/camiseta.png" alt="camiseta">
-        <h2>Camiseta Roja Ancha</h2>
-        <p>300 Pesos</p>
-        <a href="" class="button">Comprar</a>
-    </div>
+    <?php endwhile;?>
 
-    <div class="product">
-        <img src="assets/img/camiseta.png" alt="camiseta">
-        <h2>Camiseta Roja Ancha</h2>
-        <p>300 Pesos</p>
-        <a href="" class="button">Comprar</a>
-    </div>
-
-    <div class="product">
-        <img src="assets/img/camiseta.png" alt="camiseta">
-        <h2>Camiseta Roja Ancha</h2>
-        <p>300 Pesos</p>
-        <a href="" class="button">Comprar</a>
-    </div>
-
-    <div class="product">
-        <img src="assets/img/camiseta.png" alt="camiseta">
-        <h2>Camiseta Roja Ancha</h2>
-        <p>300 Pesos</p>
-        <a href="" class="button">Comprar</a>
-    </div>
-    <div class="product">
-        <img src="assets/img/camiseta.png" alt="camiseta">
-        <h2>Camiseta Roja Ancha</h2>
-        <p>300 Pesos</p>
-        <a href="" class="button">Comprar</a>
-    </div>
-
-    <div class="product">
-        <img src="assets/img/camiseta.png" alt="camiseta">
-        <h2>Camiseta Roja Ancha</h2>
-        <p>300 Pesos</p>
-        <a href="" class="button">Comprar</a>
-    </div>
-    <div class="product">
-        <img src="assets/img/camiseta.png" alt="camiseta">
-        <h2>Camiseta Roja Ancha</h2>
-        <p>300 Pesos</p>
-        <a href="" class="button">Comprar</a>
-    </div>
-
-    <div class="product">
-        <img src="assets/img/camiseta.png" alt="camiseta">
-        <h2>Camiseta Roja Ancha</h2>
-        <p>300 Pesos</p>
-        <a href="" class="button">Comprar</a>
-    </div>
 </div>

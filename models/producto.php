@@ -94,6 +94,21 @@
             return $productos;
         }
 
+        public function getOne(){
+            $producto = $this->db->query("SELECT * FROM productos WHERE id= {$this->getId()}");
+            return $producto->fetch_object();
+        }
+
+        public function getRandom($limit){
+            $productos = $this->db->query("SELECT * FROM productos  ORDER BY RAND() LIMIT $limit");
+            return $productos;
+        }
+
+        public function getProdCat($catId){
+            $productos = $this->db->query("SELECT * FROM productos WHERE categoria_id=$catId ORDER BY id DESC");
+            return $productos;
+        }
+
         public function save(){
             $sql = "INSERT INTO productos VALUES(null, {$this->getCategoria_id()}, '{$this->getNombre()}', '{$this->getDescripcion()}', {$this->getPrecio()}, {$this->getStock()}, null, CURDATE(), '{$this->getImagen()}')";
             $save = $this->db->query($sql);
@@ -106,7 +121,7 @@
         }
 
         public function edit(){
-            $sql = "UPDATE INTO productos SET nombre = '{$this->getNombre()}', descripcion = '{$this->getDescripcion()}', precio = {$this->getPrecio()}, stock = {$this->getStock()}, categoria_id= {$this->getCategoria_id()} ";
+            $sql = "UPDATE productos SET nombre = '{$this->getNombre()}', descripcion = '{$this->getDescripcion()}', precio = {$this->getPrecio()}, stock = {$this->getStock()}, categoria_id= {$this->getCategoria_id()} ";
             
             if($this->getImagen() != null){
                 $sql .= ", imagen = '{$this->getImagen()}'";
@@ -134,10 +149,7 @@
 
         }
 
-        public function getOne(){
-            $producto = $this->db->query("SELECT * FROM productos WHERE id= {$this->getId()}");
-            return $producto->fetch_object();
-        }
+        
 
 
     }

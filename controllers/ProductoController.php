@@ -5,7 +5,9 @@
     class productoController{
 
         public function index(){
-            
+            $producto = new Producto();
+            $productos = $producto->getRandom(6);
+
             require_once 'views/producto/destacados.php';
         }
 
@@ -54,13 +56,12 @@
 
                 if(isset($_GET['id'])){
                     $producto->setID($_GET['id']);
-                    $save = $producto->edit();
-
+                    $save = $producto->edit();                  
+                    
                 }else{
                     $save = $producto->save();
                 }
 
-               
                 if($save){
                     $_SESSION['producto'] = "complete";
                 }else {
@@ -110,6 +111,18 @@
 
             header("Location:".base_url."producto/gestion");
             
+        }
+
+        public function ver(){
+            
+            if(isset($_GET['id'])){
+                $id = $_GET['id'];
+                $producto = new Producto();
+                $producto->setId($id);
+                $pro = $producto->getOne();                
+            }
+
+            require_once 'views/producto/ver.php';
         }
 
 

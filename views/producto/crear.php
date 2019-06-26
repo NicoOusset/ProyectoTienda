@@ -11,9 +11,6 @@
     ?>
 <?php  endif; ?>
 
-<?php  
-    $url_action =  base_url."producto/save";
-?>
 
 <form action="<?=$url_action?>" method="POST" enctype="multipart/form-data">
 
