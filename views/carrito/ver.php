@@ -50,6 +50,6 @@
     <?php $stats = Utils::statsCarrito() ?>
     <h3 class="precioTotal">Precio Total: $<?=$stats['total']?> || Unidades: <?=$stats['unidades']?>  </h3>
 
-    <a href="" class="botonPedido">Hacer pedido</a>
+    <a href="<?=base_url?>pedido/hacer" class="botonPedido">Hacer pedido</a>
 
 <?php endif; ?>
