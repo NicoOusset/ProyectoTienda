@@ -7,6 +7,7 @@
             echo "controlador pedidos, accion index";
         }
 
+        
 
     }
 

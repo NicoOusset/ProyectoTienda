@@ -365,6 +365,68 @@ button{
     width: 100px;
 }
 
+#detail-product{
+    width: 100%;
+}
+
+#detail-product .image{
+    display: block;
+    width: 40%;
+    float: left;
+    margin-right: 40px;
+}
+#detail-product img{
+    display: block;
+    float: right;
+}
+
+#detail-product .data{
+    display: block;
+    width: 50%;
+    float: right;
+}
+
+#detail-product .data .button{
+    display: block;
+    width: 50%;
+    float: left;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+#detail-product .data .description{
+   margin-bottom: 20px;
+}
+
+#detail-product .data .price{
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #444;
+ }
+
+
+
+#detail-product .button{
+    width: 200%;
+}
+
+.precioTotal{
+    display: block;
+    float: right;
+}
+
+.botonPedido{
+    display: block;
+    padding: 8px;
+    width: 100px;
+    float: left;
+    background: #df1414;
+    border: 1px solid #460909;
+    color: white !important;
+    text-decoration: none;
+}
+
 
 
 /*FOOTER*/
