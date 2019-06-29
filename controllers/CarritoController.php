@@ -48,7 +48,31 @@
         }
 
         public function remove(){
-            
+            if(isset($_GET['index'])){
+                $index= $_GET['index'];
+                unset($_SESSION['carrito'][$index]);
+            }
+            header('Location:'.base_url.'carrito/index');
+        }
+
+        public function up(){
+            if(isset($_GET['index'])){
+                $index= $_GET['index'];
+                $_SESSION['carrito'][$index]['unidades']++;
+            }
+            header('Location:'.base_url.'carrito/index');
+        }
+        public function down(){
+            if(isset($_GET['index'])){
+                $index= $_GET['index'];
+
+                if($_SESSION['carrito'][$index]['unidades']>1){
+                    $_SESSION['carrito'][$index]['unidades']--;
+                }else{
+                    unset($_SESSION['carrito'][$index]);
+                }
+            }
+            header('Location:'.base_url.'carrito/index');
         }
 
         public function delete_all(){

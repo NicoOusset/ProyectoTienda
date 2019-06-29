@@ -12,6 +12,7 @@
             <th>Nombre</th>
             <th>Precio</th>
             <th>Unidades</th>
+            <th>Eliminar</th>
         </tr>
 
         <?php     
@@ -36,9 +37,19 @@
             <td>
                 <?=$producto->precio?>
             </td>
+            <td>   
+                <div class="unidades">  
+                    <?=$elemento['unidades']?>
+                </div>       
+                <div class="updown-unidades">
+                    <a href="<?=base_url?>carrito/up&index=<?=$indice?>" class="button">+</a>
+                    <a href="<?=base_url?>carrito/down&index=<?=$indice?>" class="button">-</a>
+                </div>
+            </td>      
             <td>
-                <?=$elemento['unidades']?>
-            </td>       
+                <a href="<?=base_url?>carrito/remove&index=<?=$indice?>" class="botonDelete">Quitar producto</a>      
+            </td>
+
         </tr>
 
 

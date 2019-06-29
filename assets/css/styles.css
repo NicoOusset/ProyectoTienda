@@ -348,6 +348,15 @@ button{
     text-decoration: none;
 }
 
+.botonDelete{
+    width: 100px;
+    margin: 0px auto;
+    padding: 5px;
+    background: #d11414;
+    border: 1px solid #460909;
+    color: white !important;
+    text-decoration: none;
+}
 
 
 .product img{
@@ -425,6 +434,21 @@ button{
     border: 1px solid #460909;
     color: white !important;
     text-decoration: none;
+}
+
+.updown-unidades .button{
+    width: 20px;
+    display: block;
+    float: left;
+    padding: 2px;
+    color: white !important;
+    text-decoration: none;
+    margin-left: 2px;
+}
+
+.unidades{
+    display: block;
+    float: right;
 }
 
 

@@ -18,6 +18,14 @@
             }
         }
 
+        public static function isIdentity(){
+            if (!isset($_SESSION['identity'])) {
+                header("Location:".base_url);
+            }else{
+                return true;
+            }
+        }
+        
         public static function showCategorias(){
             require_once 'models/categoria.php';
             $categoria = new Categoria();
@@ -44,6 +52,22 @@
             }
 
             return $stats;
+        }
+
+        public static function showStatus($status){
+            $value= 'Pendiente';
+
+            if ($status=="confirm") {
+                $value= 'Pendiente';
+            } elseif($status=="preparation") {
+                $value='En preparación';
+            }elseif($status=="ready") {
+                $value='Preparado para el envio';
+            }elseif($status=="sended") {
+                $value='Enviado';
+            }
+
+            return $value;
         }
 
 

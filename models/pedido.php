@@ -104,6 +104,12 @@
             $pedido = $this->db->query($sql);
             return $pedido->fetch_object();
         }
+
+        public function getAllByUser(){
+            $sql = "SELECT p.* FROM pedidos p WHERE p.usuario_id = {$this->getUsuario_id()} ORDER BY p.id DESC";
+            $pedidos = $this->db->query($sql);
+            return $pedidos;
+        }
       
         public function getProductosByPedido($id){
             $sql = "SELECT pr.*, lp.unidades FROM productos pr INNER JOIN lineas_pedidos lp ON pr.id = lp.producto_id WHERE lp.pedido_id={$id}";
@@ -144,7 +150,20 @@
             return $result;
         }
 
-        
+
+        public function updateOne(){
+            $sql = "UPDATE pedidos SET estado = '{$this->getEstado()}' WHERE id = {$this->getId()}";
+            
+            $save = $this->db->query($sql);
+
+            $result = false;
+            if ($save) {
+                $result = true;
+            }
+            return $result;
+
+
+        }
         
 
 
